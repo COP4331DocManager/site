@@ -1,0 +1,25 @@
+<section ngInit= "navCtrl.setTab(1)" class="navigationBar">
+ 
+    <ul class="nav nav-pills"   >
+    <li ng-class="{ active:navCtrl.isSet(1) }" class ="mainNav">
+    	<a href ng-click="navCtrl.setTab(1)" alt="Go to home page">Home</a>
+    </li>
+				
+    <li ng-class="{ active:navCtrl.isSet(2) }" class="mainNav">
+    	<a href ng-click="navCtrl.setTab(2)">Account</a>
+    </li>
+				
+    <li ng-class="{ active:navCtrl.isSet(3) }"  class="mainNav">
+     	<a href ng-click="navCtrl.setTab(3)">Logout</a>
+    </li>
+		<li>
+			<search-bar></search-bar>
+		</li>
+		<li>
+			<a>
+				<i class="fa fa-upload fa-3x" aria-hidden="true"></i>
+			</a>
+		</li>
+ 
+	</ul>
+</section>
