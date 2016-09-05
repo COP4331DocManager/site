@@ -15,13 +15,15 @@
 	   });
    	})
 	
-	
-	function NavCtrl($scope, $location)
+	//root scope will be used to store checks to see if an account is logged in or not
+	function NavCtrl($rootScope, $scope, $location)
 	{
 		// used to change route
 		$scope.go = function ( path ) {
 			$location.path( path );
 		}
+		
+		$rootScope.loggedIn = false
 		
 
 		$scope.dropdown = [
@@ -31,22 +33,18 @@
 				"active": true
 			},
 			{
-				"text": "<i class=\"fa fa-globe\"></i>&nbsp;Display an alert",
-				"click": "$alert(\"Holy guacamole!\")"
-			},
-			{
-				"text": "<i class=\"fa fa-external-link\"></i>&nbsp;External link",
-				"href": "/auth/facebook",
-				"target": "_self"
-			},
-			{
 				"divider": true
 			},
 			{
-				"text": "Logout",
+				"text": "<i class=\"fa fa-sign-out\" aria-hidden=\"true\  ng-show=\"{{$rootScope.loggedIn}}\"" ,
 				"href": "#/logout"
-		}];
-
+			},
+			{
+				"text": "<i class=\"fa fa-sign-in\" aria-hidden=\"true\  ng-hide=\"{{$rootScope.loggedIn}}\"> Login<\i>",
+				"href": "#/login"
+			}
+			
+		];
 
 	};
 })();

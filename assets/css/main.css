@@ -99,5 +99,28 @@ body {
     background-color: lightgreen !important;
     color: black !important;
 }
+
 /*======================homeView==============================*/
 
+
+.groupBox{
+ 	background-image: linear-gradient(to bottom, white, white);    
+	background-image: -webkit-linear-gradient (top, grey, black); 
+	text-align: center;
+	width:500px;
+	height:100px
+		
+}
+.groupCheckBox{/*box on homepage for each group*/
+	margin-right; 10px;
+	margin-left: 10px;
+	font-size: 15px;
+	text-align: center
+}
+
+.groupSettingsIcon{
+	float: right;
+	margin-left: 20px;
+}
+		
+}

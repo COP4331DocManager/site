@@ -2,24 +2,20 @@
  
     <ul class="nav nav-pills"   >
     <li class ="mainNav">
-    	<button ng-click="go('/')">Home</button>
+    	<button class="btn btn-lg btn-primary" ng-click="go('/')">Home</button>
     </li>
 				
     <li class="mainNav">
 		<button type="button" class="btn btn-lg btn-primary" data-animation="am-flip-x" bs-dropdown="dropdown" aria-haspopup="true" aria-expanded="false">Account</button>
-	  </li>
-				
-    <li>
-     	<button ng-click="go('/logout')"> Logout</button>
-    </li>
-		<li>
-			<search-bar></search-bar>
-		</li>
-		<li>
-			<a ng-click="go('/upload')">
-				<i class="fa fa-upload fa-3x" aria-hidden="true"></i>
-			</a>
-		</li>
+	</li>
+	<li>
+		<search-bar></search-bar>
+	</li>
+	<li>
+		<a ng-click="go('/upload')">
+			<i class="fa fa-upload fa-3x" aria-hidden="true"></i>
+		</a>
+	</li>
  
 	</ul>
 </section>

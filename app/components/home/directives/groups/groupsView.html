@@ -1,4 +1,12 @@
-<label ng-repeat="role in roles">
-  <input type="checkbox" checklist-model="user.roles" checklist-value="role"> 
-	{{role.text}}
-</label>
+<div class="groupBox">
+	<label ng-repeat="group in groups">
+		<div class="groupCheckBox">
+			<input type="checkbox" checklist-model="user.groups" checklist-value="group" > 
+			{{group.text}}
+		</div>
+	</label>
+
+	<a href ng-click="showYesNo()" class="fa fa-cogs" aria-hidden="true"></a>
+
+	
+</div>
