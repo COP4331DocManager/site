@@ -1,7 +1,20 @@
-<div class="groupBox">
-	<home-groups></home-groups>
-	
-	
-	<settings></settings>
+<div class ="row">
+	<div class="groupBox col-xs-5">
+		<div ng-controller="GroupList">
+			<label ng-repeat="group in groups">
+				<div class="groupCheckBox">
+					<input type="checkbox" checklist-model="user.groups" checklist-value="group" > 
+					{{group.text}}
+				</div>
+			</label>
+		</div>
+		
+		<!-- modal controller -->
+		<a href ng-click="showYesNo()" class="fa fa-cogs groupSettingsIcon" aria-hidden="true"></a>
+		
+	</div>
 
+	<div class="col-xs-3 col-xs-push-2 groupActionsBox" >
+		Group Actions Box
+	</div>
 </div>

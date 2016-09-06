@@ -106,9 +106,9 @@ body {
 .groupBox{
  	background-image: linear-gradient(to bottom, white, white);    
 	background-image: -webkit-linear-gradient (top, grey, black); 
-	text-align: center;
-	width:500px;
-	height:100px
+	text-align: left;
+	/*width:500px
+	height:100px*/
 		
 }
 .groupCheckBox{/*box on homepage for each group*/
@@ -122,5 +122,10 @@ body {
 	float: right;
 	margin-left: 20px;
 }
-		
+
+.groupActionsBox{
+	display:block;
+	background-color:pink;
+
 }
+		
