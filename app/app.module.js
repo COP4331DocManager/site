@@ -18,7 +18,8 @@
 		'app.upload',
 		'app.account',
 	  	'app.login',
-	  	'app.logout'
+	  	'app.logout',
+	  	'app.group.create'
 		
       
     ])
