@@ -5,7 +5,7 @@
     .module('app', [
       // Angular modules.
 		'ngRoute',
-		'mgcrea.ngStrap', //angular-strap
+		//'mgcrea.ngStrap', //angular-strap
 		'ngAnimate',
 		'ngSanitize',
 	  	"checklist-model",
@@ -34,7 +34,7 @@
     });
   };
 
-run.$inject = ['$rootScope', '$location', '$cookieStore', '$http'];
+run.$inject = ['$rootScope', '$location', '$cookieStore', '$http' ];
     function run($rootScope, $location, $cookieStore, $http) {
         // keep user logged in after page refresh
 		
