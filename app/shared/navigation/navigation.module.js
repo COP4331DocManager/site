@@ -22,9 +22,14 @@
 		$scope.go = function ( path ) {
 			$location.path( path );
 		}
-			
+		
 		//This to see see conditionally show buttons...temp
-		/*DEBUG*/$rootScope.loggedIn = true
+        $rootScope.loggedIn = $rootScope.globals.currentUser;
+		if ($rootScope.loggedin){ 
+			$rootScope.loggedIn = true; // globals.currentUser could be undefined
+		}else{
+			$rootScope.loggedIn = false;
+		}
 		
 		/*TODO Fix conditional buttons (login/out) based on root scope */
 		$scope.dropdown = [
@@ -37,11 +42,11 @@
 				"divider": true
 			},
 			{
-				"text": "<i class=\"fa fa-sign-out\" aria-hidden=\"true\  ng-show=\"{{$rootScope.loggedIn}}\"> Logout </i>",
+				"text": "<i class=\"fa fa-sign-out\" aria-hidden=\"true\" ng-show=\"loggedIn\"> Logout </i>",
 				"href": "#/logout"
 			},
 			{
-				"text": "<i class=\"fa fa-sign-in\" aria-hidden=\"true\  ng-hide=\"{{$rootScope.loggedIn}}\"> Login<\i>",
+				"text": "<i class=\"fa fa-sign-in\" aria-hidden=\"true\"  ng-hide=\"loggedIn\"> Login<\i>",
 				"href": "#/login"
 			}
 			

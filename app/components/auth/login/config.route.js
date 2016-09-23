@@ -2,15 +2,16 @@
   'use strict';
 
   angular
-    .module('app.login')
+    .module('app')
     .config(configFunction);
 
   configFunction.$inject = ['$routeProvider'];
 
   function configFunction($routeProvider) {
     $routeProvider.when('/login', {
-      templateUrl: 'app/components/auth/login/loginView.html'
-    });
+		controller: 'LoginController',
+		templateUrl: 'app/components/auth/login/loginView.html',
+		controllerAs: 'vm'
+  	})
   }
-
 })();

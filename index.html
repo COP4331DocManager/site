@@ -24,17 +24,16 @@
     
     <navigation></navigation>
     
-	  
-	<div ng-view ="">
+	
+          
+	<div ng-view>
 		<home></home>
 
 		<upload></upload>
-
-		<login></login>
-		<logout></logout>'
-		
+				
 		<new-group></new-group>
-	</div>
+  	</div>
+ 
 
 
     <!--Third-party JS-->
@@ -48,6 +47,7 @@
    	<script src="assets/libs/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
   	<script src="assets/libs/bower_components/angular-animate/angular-animate.min.js"></script>
  	<script src="assets/libs/checklist_model/checklist-model.js"></script>
+	<script src="assets/libs/node_modules/angular-cookies/angular-cookies.js"></script>
 	  
     <!--main app module-->
     <script src="app/app.module.js"></script>
@@ -80,16 +80,26 @@
 	<script src="app/components/account/config.route.js"></script>
 	<script src="app/components/account/directives/account.directive.js"></script>
 		
-	<!-- Login -->
-		<script src="app/components/auth/login/login.module.js"></script>
+	<!-- AUTH -->
+	  	<!-- service -->
+	  	<script src="app/components/auth/services/authentication.service.js"></script>
+	  	<script src="app/components/auth/services/flash.service.js"></script>
+	  <script src="app/components/auth/services/user.service.local-storage.js"></script>
+	  
+		<!-- Login -->
+	  	<script src="app/components/auth/login/login.controller.js"></script>
 		<script src="app/components/auth/login/config.route.js"></script>
 		<script src="app/components/auth/login/directives/login.directive.js"></script>
-	<!--logout-->
+	  	
+	  	
+		<!--logout-->
 		<script src="app/components/auth/logout/logout.module.js"></script>
 		<script src="app/components/auth/logout/config.route.js"></script>
-		<script src="app/components/auth/logout/directives/logout.directive.js"></script>
 		
-	  
+	 	
+	  	<!-- Register -->
+	  	<script src="app/components/auth/register/config.route.js"></script>
+	  	<script src="app/components/auth/register/register.controller.js"></script>
 	<!-- groups -->
 	  
 		<!-- New -->
